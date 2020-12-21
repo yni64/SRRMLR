@@ -1,0 +1,41 @@
+Package: SRRMLR
+Title: An construction of the SRRMLR model
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Hailong",
+           family = "Ba",
+           role = c("aut"),
+           email = "hlba@mail.ustc.edu.cn"),
+    person(given = "Yijin",
+           family = "Ni",
+           role = c("cre"),
+           email = "estelle@mail.ustc.edu.cn"))
+Description: This package provides an tractable algorithm for building a 
+    multinomial logistic regression model with the model proposed in 
+    [Wen et al. (2020)]. The proposed method combines the merits of rank 
+    reduction and variable selection, constructing a parameter matrix with row 
+    sparsity and low-rank. Four other baseline methods are also included for
+    comparison (grouped/ungrouped multinomial lasso [Simon et al. (2013)]; 
+    NNET [Ripley et al. (2016)]; RRVGLM [Yee and Hastie (2003)]). As a 
+    representative example, the HAM10000 dataset is included as well. See 
+    'Simultaneous Dimension Reduction and Variable Selection for Multinomial 
+    Logistic Regression' for further information of this algorithm and related 
+    backgrounds.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+    doParallel,
+    parallel,
+    foreach,
+    glmnet,
+    MASS,
+    nnet,
+    VGAM
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat (>= 2.0.0)
+Config/testthat/edition: 2
